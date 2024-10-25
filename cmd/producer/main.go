@@ -22,15 +22,7 @@ func main() {
 		log.Fatal(err)
 	}
 	keys := generateUUIDstring()
-
-	// 123
-	//123123
-	// 123123
-	// 123123
-	//123
-
-	//123123
-
+	
 	for i := 0; i < 100; i++ {
 		msg := fmt.Sprintf("message %d", i)
 		key := keys[i%numberOfKeys]
