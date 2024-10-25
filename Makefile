@@ -1,6 +1,9 @@
 run-p:
 	go run cmd/producer/main.go
 
+run-c:
+	go run cmd/consumer/main.go
+
 compose:
 	docker-compose up -d
 

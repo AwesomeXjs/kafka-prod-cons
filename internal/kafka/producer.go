@@ -48,6 +48,7 @@ func (p *Producer) Produce(message, topic, key string, timestamp time.Time) erro
 		return err
 	}
 
+	// ждем информацию об эвенте
 	event := <-kafkaChan
 	switch event.(type) {
 	case *kafka.Message:

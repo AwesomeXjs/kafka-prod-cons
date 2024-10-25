@@ -21,9 +21,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer producer.Close()
+
 	keys := generateUUIDstring()
-	
-	for i := 0; i < 100; i++ {
+
+	for i := 0; i < 1000; i++ {
 		msg := fmt.Sprintf("message %d", i)
 		key := keys[i%numberOfKeys]
 
